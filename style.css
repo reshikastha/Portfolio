@@ -509,6 +509,7 @@ article .icon {
 #projects {
   position: relative;
   margin-top: 200px;
+  margin-bottom: 50px;
 }
 
 .color-container {
@@ -531,7 +532,132 @@ article .icon {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+.projects-containers{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 2rem;
+}
+.custom-container {
+  width: 300px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto; /* Center the container horizontally */
+}
 
+.container-img {
+  max-width: 100%;
+  border-radius: 10px; /* Optional rounded corners for the image */
+}
+
+.container-text {
+  font-size: 1.5rem;
+  margin: 20px ;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.container {
+	display: flex;
+	align-items: center;
+  justify-content: center;
+}
+.tabs {
+	display: flex;
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 1px 0 rgba(#185ee0, 0.15), 0 6px 12px 0 rgba(#185ee0, 0.15);
+	padding: 0.75rem;
+	border-radius: 99px;
+	* {
+		z-index: 2;
+	}
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+.tab {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 54px;
+	width: 200px;
+	font-size: 1.25rem;
+	font-weight: 500;
+	border-radius: 99px; 
+	cursor: pointer;
+  z-index: 2;
+	transition: color 0.15s ease-in;
+}
+
+.notification {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2rem;
+	height: 2rem;
+	margin-left: 0.75rem;
+	border-radius: 50%;
+	background-color: #228B22;
+	transition: 0.15s ease-in;
+}
+
+input[type="radio"]:checked + label {
+  color: white; /* Set the desired text color when checked */
+}
+
+input[type="radio"]:checked + label > .notification {
+  background-color: #185ee0;
+  color: #fff;
+}
+
+input[id="radio-1"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(0);
+		}
+	}
+}
+
+input[id="radio-2"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(100%);
+		}
+	}
+}
+
+input[id="radio-3"] {
+	&:checked {
+		& ~ .glider {
+			transform: translateX(200%);
+		}
+	}
+}
+
+.glider {
+	position: absolute;
+	display: flex;
+	height: 54px;
+	width: 200px;
+	background-color: #228B22;
+	z-index: 1;
+	border-radius: 99px; 
+	transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+	.tabs {
+		transform: scale(0.6);
+	}
+}
 /* CONTACT */
 
 #contact {
