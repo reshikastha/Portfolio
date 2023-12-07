@@ -658,6 +658,28 @@ input[id="radio-3"] {
 		transform: scale(0.6);
 	}
 }
+
+@media (max-width: 600px) {
+  .custom-container {
+    width: 100%; /* Adjust the width for smaller screens */
+  }
+
+  .projects-containers {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    
+    padding: 10px;
+  }
+  .custom-container {
+    width: 70%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+}
+
 /* CONTACT */
 
 #contact {
